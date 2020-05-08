@@ -43,15 +43,13 @@ Node *remove_node(Node *head, Node *node)
 // Insert A Node At The Beginning...
 Node *prepend(Node *head, int item)
 {
-    Node *new_node = create_node(item, head);
-    return new_node;
+    return create_node(item, head);
 }
 
 // Insert A Node...
 void *insert(Node *node, int item)
 {
-    Node *new_node = create_node(item, node->next);
-    node->next = new_node;
+    node->next = create_node(item, node->next);
 }
 
 // Insert A Node At The End...
