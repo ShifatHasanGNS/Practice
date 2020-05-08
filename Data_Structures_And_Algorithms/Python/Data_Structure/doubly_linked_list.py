@@ -1,4 +1,4 @@
-# Singly_Linked_List Data_Structure
+# Doubly_Linked_List Data_Structure
 
 class Node:
     def __init__(self, data, previous=None, next=None):
