@@ -60,11 +60,23 @@ Node *append(Node *head, int item)
     return head;
 }
 
+// Find A Node
+Node *find_node(Node *head, int item)
+{
+    Node *temp = head;
+    while(temp != NULL)
+    {
+        if(temp->data == item) return temp;
+        temp = temp->next;
+    }
+    return NULL;
+}
+
 // Print Linked_List...
 void print_linked_list(Node *head)
 {
     Node *current_node = head;
-    printf("Linked List :: [%d", current_node->data);
+    printf("[%d", current_node->data);
     current_node = current_node->next;
     while(current_node != NULL)
     {
