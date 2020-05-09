@@ -1,26 +1,10 @@
 #include <stdio.h>
-#include <stdlib.h>
 
-// Heap Data_Structure
-
-int left(int i)
-{
-    return 2*i+1;
-}
-
-int right(int i)
-{
-    return 2*i+2;
-}
-
-int parent(int i)
-{
-    return (i-1)/2;
-}
+// Heap_Sort Algorithm ---> Time Complexity = nlog2(n)
 
 void max_heapify(int *heap, int heap_size, int i)
 {
-    int l = left(i), r = right(i), largest = i, temp;
+    int l = 2*i+1, r = 2*i+2, largest = i, temp;
     if (l < heap_size && heap[l] > heap[largest]) largest = l; // If left child is larger than root
     if (r < heap_size && heap[r] > heap[largest]) largest = r; // If right child is larger than largest so far
     if (largest != i) // If largest is not root
@@ -32,17 +16,12 @@ void max_heapify(int *heap, int heap_size, int i)
     }
 }
 
-void build_max_heap(int *heap, int heap_size)
-{
-    // Build heap (rearrange array)
-    for (int i = heap_size/2-1; i >= 0; i--)
-        max_heapify(heap, heap_size, i);
-}
-
 void heap_sort(int *heap, int heap_size)
 {
     int temp;
-    build_max_heap(heap, heap_size); // Build heap (rearrange array)
+    // Build heap (rearrange array)
+    for (int i = heap_size/2-1; i >= 0; i--)
+        max_heapify(heap, heap_size, i);
     // One by one extract an element from heap 
     for (int i = heap_size-1; i > 0; i--)
     {
@@ -56,13 +35,6 @@ void heap_sort(int *heap, int heap_size)
     }
 }
 
-void printHeap(int heap[], int heap_size) 
-{ 
-    for (int i = 0; i < heap_size; i++)
-        printf("%d  ", heap[i]);
-    printf("\n");
-} 
-
 //-------------------------------------------------------------------------------//
 
 int main()
@@ -71,8 +43,9 @@ int main()
     int heap_size = sizeof(heap_array)/sizeof(int);
 
     heap_sort(heap_array, heap_size);
-    printf("[Heap-Sort] :: ");
-    printHeap(heap_array, heap_size);
+    printf("[ Heap_Sort Algorithm ]\n");
+    for (int i = 0; i < heap_size; i++) printf("%d  ", heap_array[i]);
+    printf("\n");
 
     return 0;
 }
