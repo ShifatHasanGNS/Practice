@@ -67,6 +67,31 @@ void build_min_heap(int *heap, int heap_size)
         min_heapify(heap, heap_size, i);
 }
 
+int extract_max(int *heap, int heap_size)
+{
+    int max_item = heap[0];
+    heap[0] = heap[heap_size-1]; // Copy last item in the first index(0)
+    heap_size--; // Because, we no longer need the previous last item...
+    max_heapify(heap, heap_size, 0); // Unless it would not be a Max_Heap... So, Making Max_Heap again...
+    return max_item;
+}
+
+int insert_node(int *heap, int heap_size, int node)
+{
+    int i = heap_size, p, temp;
+    heap_size++;
+    heap[heap_size-1] = node;
+    while (i > 0 && heap[i] > heap[parent(i)])
+    {
+        p = parent(i);
+        temp = heap[p];
+        heap[p] = heap[i];
+        heap[i] = temp;
+        i = p;
+    }
+    return heap_size;
+}
+
 void heap_sort(int *heap, int heap_size)
 {
     int temp;
