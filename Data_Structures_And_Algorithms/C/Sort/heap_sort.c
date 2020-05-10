@@ -2,7 +2,7 @@
 
 // Heap_Sort Algorithm ---> Time Complexity = nlog2(n)
 
-void max_heapify(int *heap, int heap_size, int i)
+void heapify(int *heap, int heap_size, int i)
 {
     int l = 2*i+1, r = 2*i+2, largest = i, temp;
     if (l < heap_size && heap[l] > heap[largest]) largest = l; // If left child is larger than root
@@ -12,7 +12,7 @@ void max_heapify(int *heap, int heap_size, int i)
         temp = heap[i];
         heap[i] = heap[largest];
         heap[largest] = temp;
-        max_heapify(heap, heap_size, largest); // Recursively heapify the affected sub-tree
+        heapify(heap, heap_size, largest); // Recursively heapify the affected sub-tree
     }
 }
 
@@ -21,7 +21,7 @@ void heap_sort(int *heap, int heap_size)
     int temp;
     // Build heap (rearrange array)
     for (int i = heap_size/2-1; i >= 0; i--)
-        max_heapify(heap, heap_size, i);
+        heapify(heap, heap_size, i);
     // One by one extract an element from heap 
     for (int i = heap_size-1; i > 0; i--)
     {
@@ -30,8 +30,8 @@ void heap_sort(int *heap, int heap_size)
         heap[0] = heap[i];
         heap[i] = temp;
         heap_size--;
-        // call max heapify on the reduced heap
-        max_heapify(heap, heap_size, 0);
+        // call heapify on the reduced heap
+        heapify(heap, heap_size, 0);
     }
 }
 
