@@ -1,6 +1,6 @@
 #include <stdio.h>
 
-// Merge_Sort Algorithm ---> Time Complexity = nlog2(n) to n^2
+// Merge_Sort Algorithm ---> Time Complexity = nlog2(n)
 void merge_sort(int array[], int left, int right)
 {
     if(left >= right) return;
