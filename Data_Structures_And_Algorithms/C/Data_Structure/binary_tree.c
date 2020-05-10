@@ -6,7 +6,7 @@ typedef struct node Node;
 struct node
 {
     int data;
-    Node *left, *right;
+    Node *parent, *left, *right;
 };
 
 Node *create_node(int item)
@@ -14,40 +14,97 @@ Node *create_node(int item)
     Node *new_node = (Node *)malloc(sizeof(Node));
     if(new_node == NULL) exit(1);
     new_node->data = item;
+    new_node->parent = NULL;
     new_node->left = NULL;
     new_node->right = NULL;
     return new_node;
 }
 
-void add_left_child(Node *node, Node *child)
+void add_left_child(Node *parent_node, Node *child)
 {
-    node->left = child;
+    child->parent = parent_node;
+    parent_node->left = child;
 }
 
-void add_right_child(Node *node, Node *child)
+void add_right_child(Node *parent_node, Node *child)
 {
-    node->right = child;
+    child->parent = parent_node;
+    parent_node->right = child;
 }
 
-void pre_order(Node *node)
+void pre_order(Node *root)
 {
-    printf("%d  ", node->data);
-    if(node->left != NULL) pre_order(node->left);
-    if(node->right != NULL) pre_order(node->right);
+    printf("%d  ", root->data);
+    if(root->left != NULL) pre_order(root->left);
+    if(root->right != NULL) pre_order(root->right);
 }
 
-void post_order(Node *node)
+void post_order(Node *root)
 {
-    if(node->left != NULL) post_order(node->left);
-    if(node->right != NULL) post_order(node->right);
-    printf("%d  ", node->data);
+    if(root->left != NULL) post_order(root->left);
+    if(root->right != NULL) post_order(root->right);
+    printf("%d  ", root->data);
 }
 
-void in_order(Node *node)
+void in_order(Node *root)
 {
-    if(node->left != NULL) in_order(node->left);
-    printf("%d  ", node->data);
-    if(node->right != NULL) in_order(node->right);
+    if(root->left != NULL) in_order(root->left);
+    printf("%d  ", root->data);
+    if(root->right != NULL) in_order(root->right);
+}
+
+Node *bst_insert(Node *root, Node *node)
+{
+    if (root == NULL)
+    {
+        root = node;
+        return root;
+    }
+    Node *parent_node = NULL, *current_node = root;
+    while (current_node != NULL)
+    {
+        parent_node = current_node;
+        if (node->data < current_node->data) current_node = current_node->left;
+        else current_node = current_node->right;
+    }
+    if (node->data < parent_node->data) add_left_child(parent_node, node);
+    else add_right_child(parent_node, node);
+    return root;
+}
+
+Node *bst_transplant(Node *root, Node *current_node, Node *new_node)
+{
+    if (current_node == root) root = new_node;
+    else if (current_node == current_node->parent->left) add_left_child(current_node->parent, new_node);
+    else add_right_child(current_node->parent, new_node);
+    return root;
+}
+
+Node *bst_minimum(Node *node)
+{
+    Node *smallest_node = node;
+    while(smallest_node->left != NULL) smallest_node = smallest_node->left;
+    return smallest_node;
+}
+
+Node *bst_delete(Node *root, Node *node)
+{
+    Node *smallest_node;
+    if (node->left == NULL) root = bst_transplant(root, node, node->right);
+    else if (node->right == NULL) root = bst_transplant(root, node, node->left);
+    else
+    {
+        smallest_node = bst_minimum(node->right);
+        if (smallest_node->parent != node)
+        {
+            root = bst_transplant(root, smallest_node, smallest_node->right);
+            add_right_child(smallest_node, node->right);
+        }
+        root = bst_transplant(root, node, smallest_node);
+        add_left_child(smallest_node, node->left);
+    }
+    free(node);
+    return root;
 }
 
 
@@ -88,6 +145,7 @@ Node *create_tree()  // This function just to Test
     // Return root-node;
     return two;
 }
+
 
 //-------------------------------------------------------------------------------//
 
