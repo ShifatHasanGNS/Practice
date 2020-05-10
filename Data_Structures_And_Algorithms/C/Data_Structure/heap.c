@@ -3,6 +3,13 @@
 
 // Heap Data_Structure
 
+void printHeap(int heap[], int heap_size) 
+{ 
+    for (int i = 0; i < heap_size; i++)
+        printf("%d  ", heap[i]);
+    printf("\n");
+} 
+
 int left(int i)
 {
     return 2*i+1;
@@ -77,13 +84,6 @@ void heap_sort(int *heap, int heap_size)
     }
 }
 
-void printHeap(int heap[], int heap_size) 
-{ 
-    for (int i = 0; i < heap_size; i++)
-        printf("%d  ", heap[i]);
-    printf("\n");
-} 
-
 //-------------------------------------------------------------------------------//
 
 int main()
@@ -91,8 +91,8 @@ int main()
     int heap_array[] = {2, 3, 20, 13, 15, 6, 0, 19, 16, 12, 8, 10, 1, 5, 14, 18, 7, 17, 4, 9, 11};
     int heap_size = sizeof(heap_array)/sizeof(int);
 
-    heap_sort(heap_array, heap_size);
     printf("[Heap-Sort] :: ");
+    heap_sort(heap_array, heap_size);
     printHeap(heap_array, heap_size);
 
     return 0;
