@@ -11,7 +11,6 @@ typedef struct hash_t
 {
     char key[MAX_NAME];
     int value;
-    //...Other Stuffs...
     struct hash_t *next;
 }hash_t;
 
