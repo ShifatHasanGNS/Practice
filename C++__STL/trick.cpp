@@ -6,12 +6,12 @@ using namespace std;
 #define Fo(i, k, n) for(i=k; i<n; i++)
 
 template<typename... T>
-void read(T&... args) {
+void read(T &...args) {
 	((cin >> args), ...);
 }
 
-template<typename... T>
-void write(T&&... args) { //rvalue reference is new to C++ 
+template<typename ...T>
+void write(T &&...args) { //rvalue reference is new to C++ 
 	((cout << args << " "), ...);
 }
 
