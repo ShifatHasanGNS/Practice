@@ -16,7 +16,7 @@ bool is_prime(int p)
     else return false;
 }
 
-int prime_factorize(int num)
+vector<pair<int, int>> prime_factorize(int num)
 {
     int p, c;
     vector<pair<int, int>> pf;
@@ -33,6 +33,7 @@ int prime_factorize(int num)
             pf.push_back(make_pair(p, c));
         }
     }
+    return pf;
 }
 
 int main(int argc, char const *argv[])
@@ -40,9 +41,20 @@ int main(int argc, char const *argv[])
     int num;
     while(true)
     {
-        cout << ">>> ";
-        cin >> num;
-        
+        int num;
+        vector<pair<int, int>> pf;
+        while(true)
+        {
+            cout << ">>> ";
+            cin >> num;
+            pf = prime_factorize(num);
+            cout << "1";
+            for(pair<int, int> x : pf)
+            {
+                cout << " x " << x.first << "^" << x.second;
+            }
+            cout << "\n" << endl;
+        }
     }
     return 0;
 }
