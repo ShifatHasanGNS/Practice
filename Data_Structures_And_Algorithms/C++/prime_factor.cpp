@@ -3,11 +3,15 @@ using namespace std;
 
 typedef struct
 {
-    
+    int power[100000];
+    int prime[100000];
 }Prime_Factor;
 
 
-int 
+int prime_factorize(int num)
+{
+    
+}
 
 int main(int argc, char const *argv[])
 {
