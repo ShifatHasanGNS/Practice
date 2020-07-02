@@ -20,17 +20,23 @@ vector<pair<int, int>> prime_factorize(int num)
 {
     int p, c;
     vector<pair<int, int>> pf;
-    for (p=2; p*p <= num; p++)
+    num = abs(num);
+    if (num == 1) pf.push_back(make_pair(1, 1));
+    else if (is_prime(num)) pf.push_back(make_pair(num, 1));
+    else
     {
-        if (is_prime(p) && num % p == 0)
+        for (p=2; num != 1; p++)
         {
-            c = 0;
-            while (num % p == 0)
+            if (is_prime(p) && num % p == 0)
             {
-                c++;
-                num /= p;
+                c = 0;
+                while (num % p == 0)
+                {
+                    c++;
+                    num /= p;
+                }
+                pf.push_back(make_pair(p, c));
             }
-            pf.push_back(make_pair(p, c));
         }
     }
     return pf;
