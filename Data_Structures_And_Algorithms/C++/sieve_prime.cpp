@@ -1,5 +1,4 @@
 // Sieve Of Erathosthenes
-// sieve(), isPrime()
 
 #include <bits/stdc++.h>
 using namespace std;
@@ -23,11 +22,6 @@ void sieve(int n)
             }
         }
     }
-}
-
-bool isPrime(int n)
-{
-    return (mark[n]) ? false : true;
 }
 
 int main(int argc, char const *argv[])
