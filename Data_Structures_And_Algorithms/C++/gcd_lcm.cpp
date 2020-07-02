@@ -12,7 +12,8 @@ int gcd(int a, int b)
     max = (a > b) ? a : b;
     min = (a < b) ? a : b;
     if(min == 0) return max;
-    gcd(min, max%min);
+    else gcd(min, max%min);
+    return -1;
 }
 
 int lcm(int a, int b)
