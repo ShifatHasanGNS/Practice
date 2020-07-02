@@ -16,33 +16,15 @@ bool is_prime(int p)
     else return false;
 }
 
-int prime_factorize(int num)
-{
-    int p, c;
-    vector<pair<int, int>> pf;
-    for (p=2; p*p <= num; p++)
-    {
-        if (is_prime(p) && num % p == 0)
-        {
-            c = 0;
-            while (num % p == 0)
-            {
-                c++;
-                num /= p;
-            }
-            pf.push_back(make_pair(p, c));
-        }
-    }
-}
-
 int main(int argc, char const *argv[])
 {
-    int num;
+    int n;
     while(true)
     {
         cout << ">>> ";
-        cin >> num;
-        
+        cin >> n;
+        if(is_prime(n)) cout << "YES" << endl;
+        else cout << "NO" << endl;
     }
     return 0;
 }
