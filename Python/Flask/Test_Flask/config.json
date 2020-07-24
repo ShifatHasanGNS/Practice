@@ -1,0 +1,13 @@
+{
+    "parameters":
+    {
+        "local_server": "True",
+        "local_uri": "mysql://root:@localhost/tech_sci_math",
+        "product_uri": "mysql://root:@localhost/tech_sci_math",
+        "facebook_url": "https://facebook.com/ShifatHasanGNS",
+        "github_url": "https://github.com/ShifatHasanGNS",
+        "twitter_url": "https://twitter.com/ShifatHasanGNS",
+        "gmail_user": "shifathasan31415@gmail.com",
+        "gmail_password": "#@google01#9265358979323846262997924581618033989"
+    }
+}
