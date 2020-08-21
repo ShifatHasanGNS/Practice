@@ -3,16 +3,16 @@ package main
 import "fmt"
 
 func main() {
-	var number1 uint16 = 260 // Explicit
-	var number2 = 20000.1    // Semi Implicit
-	number3 := 6             // Implicit
-	var number uint64        // defined as --> 0
-	var bl bool              // defined as --> false
+	var number1 uint16 = 260                             // Explicit
+	var number2 = 20000.1                                // Semi Implicit
+	number3 := 6                                         // Implicit
+	var number uint64                                    // defined as --> 0
+	var bl bool                                          // defined as --> false
+	var x string = fmt.Sprintf("\nHello, %T %v", 10, 10) // using --> Sprintf()
 
 	fmt.Println("Hello World...", number1)
 	fmt.Printf("%T %T\n", number2, number3)
 	fmt.Println(number, bl)
-	var x string = fmt.Sprintf("\nHello, %T %v", 10, 10)
 	fmt.Println(x)
 	fmt.Printf("\nHello, %T %v", 10, 10)                       // %T --> type,  %v --> any variable
 	fmt.Printf("\nThe probability is 50 %%")                   // %% --> % sign
