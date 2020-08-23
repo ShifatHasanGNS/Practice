@@ -26,7 +26,7 @@ func main() {
 	fmt.Printf("\nNumber: %g", 345512145166165165165.1655)     // %g --> floating point number
 	fmt.Printf("\n\nString: %s", "Shifat Hasan")               // default string
 	fmt.Printf("\nString: %q", "Shifat Hasan")                 // double quoted string
-	fmt.Printf("\n\nNumber: %.5f has padding", 3455.121415561) // (only for float) with padding: width.precision ; 9.5
-	fmt.Printf("\n\nNumber: %-5d has padding", 3455)           // with padding: width.precision ; 9.5
-	fmt.Printf("\nNumber: %05d has padding", 3455)             // with padding: width.precision ; 9.5
+	fmt.Printf("\n\nNumber: %.5f has padding", 3455.121415561) // (only for float) with padding: width.precision ; 0.5
+	fmt.Printf("\n\nNumber: %-5d has padding", 3455)           // with padding: width.precision ; -5.0
+	fmt.Printf("\nNumber: %05d has padding", 3455)             // with padding: width.precision ; 05.0
 }
