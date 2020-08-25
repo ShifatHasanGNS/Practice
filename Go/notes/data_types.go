@@ -1,4 +1,4 @@
-package notes
+package main
 
 import "fmt"
 
@@ -28,5 +28,5 @@ func dataTypes() {
 	fmt.Printf("\nString: %q", "Shifat Hasan")                 // double quoted string
 	fmt.Printf("\n\nNumber: %.5f has padding", 3455.121415561) // (only for float) with padding: width.precision ; 0.5
 	fmt.Printf("\n\nNumber: %-5d has padding", 3455)           // with padding: width.precision ; -5.0
-	fmt.Printf("\nNumber: %05d has padding", 3455)             // with padding: width.precision ; 05.0
+	fmt.Printf("\nNumber: %05d has padding\n", 3455)           // with padding: width.precision ; 05.0
 }
