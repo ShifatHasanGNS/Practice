@@ -1,8 +1,8 @@
-package main
+package notes
 
 import "fmt"
 
-func mapFunc() {
+func MapFunc() {
 	var mp map[string]int = map[string]int{
 		"apple":  5,
 		"pear":   6,

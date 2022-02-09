@@ -1,8 +1,8 @@
-package main
+package notes
 
 import "fmt"
 
-func loops() {
+func Loops() {
 
 	// Original for loop
 	for i := 1; i < 10; i++ {

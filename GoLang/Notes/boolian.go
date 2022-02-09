@@ -1,8 +1,8 @@
-package main
+package notes
 
 import "fmt"
 
-func boolian() {
+func Boolian() {
 	x := 5
 	y := 6.5
 	val := float64(x) != y

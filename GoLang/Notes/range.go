@@ -1,8 +1,8 @@
-package main
+package notes
 
 import "fmt"
 
-func rangeFunc() {
+func RangeFunc() {
 	var a []int = []int{1, 3, 4, 56, 6, 7, 12, 4, 6}
 
 	for i, element := range a {

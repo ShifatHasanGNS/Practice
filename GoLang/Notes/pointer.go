@@ -1,16 +1,16 @@
-package main
+package notes
 
 import "fmt"
 
-func changeValue1(str string) {
+func ChangeValue1(str string) {
 	str = "changed!"
 }
 
-func changeValue2(str *string) {
+func ChangeValue2(str *string) {
 	*str = "changed!"
 }
 
-func pointer() {
+func Pointer() {
 	x := 7
 	y := &x
 	fmt.Println(x, y, *y)
@@ -20,9 +20,9 @@ func pointer() {
 	s := "Hello"
 	fmt.Println(s)
 
-	changeValue1(s)
+	ChangeValue1(s)
 	fmt.Println(s)
 
-	changeValue2(&s)
+	ChangeValue2(&s)
 	fmt.Println(s)
 }

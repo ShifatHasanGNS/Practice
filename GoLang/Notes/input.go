@@ -1,4 +1,4 @@
-package main
+package notes
 
 import (
 	"bufio"
@@ -7,7 +7,7 @@ import (
 	"strconv"
 )
 
-func input() {
+func Input() {
 	scanner := bufio.NewScanner(os.Stdin)
 	fmt.Print("Type the year you were born: ")
 	scanner.Scan()

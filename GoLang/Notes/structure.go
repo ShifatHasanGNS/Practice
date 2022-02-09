@@ -1,4 +1,4 @@
-package main
+package notes
 
 import "fmt"
 
@@ -25,7 +25,7 @@ func (s *Student) setAge(age int) {
 	s.age = age
 }
 
-func structure() {
+func Structure() {
 	p := Point1{1, 2}
 	fmt.Println(p)
 

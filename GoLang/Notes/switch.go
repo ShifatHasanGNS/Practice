@@ -1,8 +1,8 @@
-package main
+package notes
 
 import "fmt"
 
-func switchStatement() {
+func SwitchStatement() {
 	ans := -1
 
 	switch ans {

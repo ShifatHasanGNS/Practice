@@ -1,12 +1,12 @@
-package main
+package notes
 
 import "fmt"
 
-func changeFirst(slice []int) {
+func ChangeFirst(slice []int) {
 	slice[0] = 1000
 }
 
-func mutableImmutableDataTypes() {
+func MutableImmutableDataTypes() {
 	var x int = 5
 	y := x
 	fmt.Println("int (before)\t--->", x, y)
@@ -31,6 +31,6 @@ func mutableImmutableDataTypes() {
 	t[0] = 100 // mutable
 	fmt.Println("slice (after)\t--->", s, t)
 
-	changeFirst(s)
+	ChangeFirst(s)
 	fmt.Println("slice (after2)\t--->", s, t)
 }

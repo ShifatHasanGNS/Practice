@@ -1,11 +1,11 @@
-package main
+package notes
 
 import (
 	"fmt"
 	"math"
 )
 
-func operatorsMaths() {
+func OperatorsMaths() {
 	var a float32 = 15.8
 	var b int = 5
 

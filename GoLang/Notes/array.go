@@ -1,8 +1,8 @@
-package main
+package notes
 
 import "fmt"
 
-func array() {
+func Array() {
 	var arr1 [5]int
 	fmt.Println(arr1) // [0 0 0 0 0]
 

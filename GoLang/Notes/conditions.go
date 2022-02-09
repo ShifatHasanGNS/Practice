@@ -1,8 +1,8 @@
-package main
+package notes
 
 import "fmt"
 
-func conditions() {
+func Conditions() {
 	if 5 > 10 {
 		fmt.Print("The condition 1 is true...\n")
 	} else if 7 == 10 {

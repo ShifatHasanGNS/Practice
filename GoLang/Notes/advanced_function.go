@@ -1,19 +1,19 @@
-package main
+package notes
 
 import "fmt"
 
-func test(myFunc func(int) int, a int) {
+func Test(myFunc func(int) int, a int) {
 	fmt.Println(myFunc(a))
 }
 
-func returnFunc(x string) func() {
+func ReturnFunc(x string) func() {
 	num := 45
 	return func() {
 		fmt.Println(num)
 	}
 }
 
-func advancedFunction() {
+func AdvancedFunction() {
 	test2 := func(x int) int {
 		return x * 5
 	}(20)
@@ -23,8 +23,8 @@ func advancedFunction() {
 		return x * 5
 	}
 
-	test(test3, 3)
+	Test(test3, 3)
 
-	f := returnFunc("Hello World...")
+	f := ReturnFunc("Hello World...")
 	f()
 }
