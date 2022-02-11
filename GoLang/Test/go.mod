@@ -1,3 +1,3 @@
-module practice/golang/test
+module golang/test
 
 go 1.17

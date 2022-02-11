@@ -1,3 +1,3 @@
-module practice/golang/notes
+module golang/notes
 
 go 1.17
