@@ -22,7 +22,7 @@ ulli sigma(ulli n)
 ulli product(ulli n)
 {
     if (n == 0 || n == 1 || n == 2) return n;
-    ulli p = 1, i = 1;
+    ulli p = n, i = 2;
     for (; i*i <= n; i++) if (n % i == 0) p *= n;
     return p;
 }
@@ -34,7 +34,7 @@ void main()
     scanf("%llu", &n);
 
     printf("\n");
-    printf("     tau(%u) = %llu\n", n,     tau(n));
-    printf("   sigma(%u) = %llu\n", n,   sigma(n));
-    printf(" product(%u) = %llu\n", n, product(n));
+    printf("     tau(%llu) = %llu\n", n,     tau(n));
+    printf("   sigma(%llu) = %llu\n", n,   sigma(n));
+    printf(" product(%llu) = %llu\n", n, product(n));
 }
