@@ -38,6 +38,7 @@ ulli sigma(ulli n)
 ulli product(ulli n)
 {
     if (n == 0 || n == 1 || n == 2) return n;
+<<<<<<< HEAD
     ulli p = 1, i = 1, j = 1;
     while (j <= n)
     {
@@ -48,6 +49,10 @@ ulli product(ulli n)
         }
         i++; j = i * i;
     }
+=======
+    ulli p = n, i = 2;
+    for (; i*i <= n; i++) if (n % i == 0) p *= n;
+>>>>>>> cd578e928d3aa1f0ad20dd64b6904bbb602bedf3
     return p;
 }
 
