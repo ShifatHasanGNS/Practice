@@ -3,8 +3,12 @@ package main
 import (
 	"fmt"
 	"golang/others"
+
 )
 
 func main() {
-	fmt.Println(others.Is_Prime(5))
+	var n int
+	fmt.Scanln(&n)
+
+	fmt.Printf("phi(%v) = %v", n, others.Phi(n))
 }

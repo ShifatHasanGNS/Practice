@@ -8,7 +8,7 @@ int phi(int n)
     {
         if (n % i == 0)
         {
-            // 'i' is a dividing 'n'
+            // checking whether (n mod i) = 0 or not
             while (n % i == 0) n /= i; // dividing all the factors of 'i'
             // same as: ret * (1 - 1/p)
             ret -= ret/i;
