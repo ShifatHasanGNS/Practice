@@ -1,7 +1,11 @@
 package main
 
-import notes "golang/notes"
+import (
+	"fmt"
+	"golang/others"
+
+)
 
 func main() {
-	notes.Greet()
+	fmt.Println(others.Is_Prime(5))
 }
