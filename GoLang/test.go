@@ -7,7 +7,7 @@ import (
 
 func main() {
 	var n int
-	fmt.Scanln(&n)
+	_, _ = fmt.Scanln(&n)
 
 	fmt.Printf("phi(%v) = %v", n, others.Phi(n))
 }
