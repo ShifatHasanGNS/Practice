@@ -1,0 +1,1 @@
+### All of the files and folders here should be in the `$GOPATH` in your Computer to work properly.
