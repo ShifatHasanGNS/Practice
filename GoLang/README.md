@@ -30,3 +30,4 @@
 - To **install** the project into the `GOBIN` folder:
   - **`go install'`**
   - Now it will run just by typing the **`hello`** in the terminal or console.
+- For any Help: **`go help`**
