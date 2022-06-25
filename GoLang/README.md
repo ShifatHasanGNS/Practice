@@ -11,7 +11,7 @@
 
 ---
 
-#### Common Commands
+#### Common Commands (Through an Example-Project: hello)
 
 - To initialize a go module by creating a **go.mod** file:
   - **`go mod init example/hello`**
@@ -25,8 +25,8 @@
 - To **compile** the code into an executable:
   - **`go build`**
 - To confirm that the code works:
-  - in linux */* mac: **`./filename`**
-  - in windows: **`filename.exe`**
+  - in linux */* mac: **`./hello`**
+  - in windows: **`hello.exe`**
 - To **install** the project into the `GOBIN` folder:
   - **`go install'`**
-  - Now it will run just by typing the **`executable_filename`** in the terminal or console.
+  - Now it will run just by typing the **`hello`** in the terminal or console.
