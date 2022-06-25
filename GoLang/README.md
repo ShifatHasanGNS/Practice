@@ -7,7 +7,7 @@
     - **`mod`**
     - **`sumdb`**
   - **`src`**
-    - WorkSpaces [i.e: `notes`]
+    - WorkSpaces */* Projects [**i.e:** `notes`]
 
 ---
 
