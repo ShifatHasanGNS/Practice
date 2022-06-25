@@ -1,4 +1,4 @@
-#### File Structure
+### File Structure
 
 - **`go`**
   - **`bin`**
@@ -11,7 +11,7 @@
 
 ---
 
-#### Common Commands (Through an Example-Project: hello)
+### Common Commands | Through an Example-Project: hello
 
 - To initialize a go module by creating a **go.mod** file:
   - **`go mod init example/hello`**
