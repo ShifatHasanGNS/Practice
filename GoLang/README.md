@@ -11,10 +11,10 @@
 
 ---
 
-# $GOROOT and $GOPATH Configuration (in windows)
+### $GOROOT and $GOPATH Configuration (in windows)
 
-By default, **$GOROOT**: `C:\Program Files\Go`
-            **$GOPATH**: `%USERPROFILE%\go`
+- **$GOROOT**: `C:\Program Files\Go`
+- **$GOPATH**: `%USERPROFILE%\go`
 
 _You can change these paths if you want to._
 
