@@ -11,7 +11,20 @@
 
 -------------------------------------------------------------------------------
 
+# $GOROOT and $GOPATH Configuration (in windows)
+
+• By default, $GOROOT -> C:\Program Files\Go
+              $GOPATH -> %USERPROFILE%\go
+
+  (You can change these paths if you want to.)
+
+-------------------------------------------------------------------------------
+
 # Common Commands | Through an Example-Project: hello
+
+• For any Help -> go help
+• To Check Go Version -> go version
+• To Check Go Environment Variables -> go env
 
 • To initialize a go module by creating a 'go.mod' file:
   -> go mod init example/hello
@@ -36,4 +49,3 @@
 • To install the project into the 'GOBIN' folder:
   -> go install
     (Now it will run just by typing the 'hello' in the terminal or console.)
-• For any Help -> go help
