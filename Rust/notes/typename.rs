@@ -14,5 +14,5 @@ fn main() {
     print_type_of(&i); // i32
     print_type_of(&main); // typename::main
     print_type_of(&print_type_of::<i32>); // typename::print_type_of<i32>
-    print_type_of(&{||"Hi!"}); // typename::main::{{closure}}
+    print_type_of(&{ || "Hi!" }); // typename::main::{{closure}}
 }

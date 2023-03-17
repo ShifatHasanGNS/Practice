@@ -5,7 +5,7 @@
         let var_name: type = value;
             or,
         let var_name = value;
-    
+
     Type Name: char
 */
 

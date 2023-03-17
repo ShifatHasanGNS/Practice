@@ -5,9 +5,9 @@
         let var_name: type = value;
             or,
         let var_name = value;
-    
+
     Type Name: Unsigned (u8, u16, u32, u64, u128),
-                 Signed (i8, i16, i32, i64)
+                 Signed (i8, i16, i32, i64, i128)
 */
 
 fn main() {
